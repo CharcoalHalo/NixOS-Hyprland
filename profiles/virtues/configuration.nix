@@ -9,6 +9,7 @@
     ../../system/security/automount.nix
     # ../../system/security/firewall.nix
     ../../system/wm/hyprland.nix
+    ../../system/security/polkit.nix
   ];
 
   environment.shells = [ pkgs.zsh ];
