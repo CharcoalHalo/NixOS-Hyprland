@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  security.polkit.enable;
+  security.polkit.enable = enable;
 
   environment.systemPackages = with pkgs; [ polkit_gnome ];
 
@@ -17,7 +17,6 @@
         RestartSec = 1;
         TimeoutStopSec = 10;
       };
+    };
   };
-};
-
 }
