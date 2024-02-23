@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  security.polkit.enable = enable;
+  security.polkit.enable = true;
 
   environment.systemPackages = with pkgs; [ polkit_gnome ];
 
