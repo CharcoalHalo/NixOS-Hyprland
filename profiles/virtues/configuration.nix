@@ -11,6 +11,7 @@
     ../../system/wm/hyprland.nix
     ../../system/security/polkit.nix
     ../../system/security/ntfs.nix
+    ../../system/app/thuanr.nix
   ];
 
   environment.shells = [ pkgs.zsh ];

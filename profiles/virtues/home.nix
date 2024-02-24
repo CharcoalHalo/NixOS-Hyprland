@@ -13,7 +13,6 @@
     ../../user/hm-hyprland.nix
     ../../user/kitty.nix
     ../../user/sh.nix
-    ../../user/thunar.nix
   ];
 
   programs.home-manager.enable = true;
