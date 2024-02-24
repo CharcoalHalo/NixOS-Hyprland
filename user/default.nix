@@ -14,6 +14,7 @@
     (pkgs.discord.override {
       withVencord = true;
     })
+    motrix
     keepassxc
     backintime
     blender_4_0

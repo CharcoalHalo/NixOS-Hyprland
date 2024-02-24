@@ -21,5 +21,6 @@
     mangohud
     goverlay
     protonup-qt
+    osu-lazer-bin
   ];
 }
