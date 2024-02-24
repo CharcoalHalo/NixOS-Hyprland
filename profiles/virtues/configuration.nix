@@ -1,4 +1,8 @@
 { pkgs, lib, config, systemSettings, userSettings, ... }:
+let
+ sysdir = "../../system";
+
+in
 {
   imports = [
     ../../system/general.nix
@@ -14,9 +18,10 @@
     ../../system/security/ntfs.nix
     ../../system/security/polkit.nix
     # services
+    ../../system/services/default.nix
     ../../system/services/automount.nix
     ../../system/services/onedrive.nix
-    ../../systen/services/syncthing.nix
+    ../../system/services/syncthing.nix
     # window manager
     ../../system/wm/hyprland.nix
 

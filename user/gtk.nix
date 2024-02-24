@@ -7,7 +7,7 @@
 
     cursorTheme.name = "macOS-BigSur-White";
     cursorTheme.package = pkgs.apple-cursor;
-    cursorTheme.size = 22;
+    cursorTheme.size = 24;
 
     iconTheme.name = "WhiteSur-dark";
     iconTheme.package = pkgs.whitesur-icon-theme;

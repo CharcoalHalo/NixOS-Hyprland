@@ -50,7 +50,7 @@
   };
 
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
+    NIXOS_OZONE_WL = "1"; # enables wayland for electron
 
     WLR_NO_HARDWARE_CURSORS = "1"; # if cursor invisible 
     EDITOR = "nano";
@@ -58,24 +58,24 @@
     TERMINAL = "kitty";
 
     # Nvidia 
-    GBM_BACKEND= "nvidia-drm";
-    __GLX_VENDOR_LIBRARY_NAME= "nvidia";
-    LIBVA_DRIVER_NAME= "nvidia"; # hardware acceleration
+    GBM_BACKEND = "nvidia-drm";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    LIBVA_DRIVER_NAME = "nvidia"; # hardware acceleration
 
     # Toolkit
-    GDK_BACKEND="wayland,x11";
-    SDL_VIDEODRIVER="wayland"; # can cause issues in games
-    CLUTTER_BACKEND="wayland";
+    GDK_BACKEND = "wayland,x11";
+    SDL_VIDEODRIVER = "wayland,x11"; # can cause issues in games
+    CLUTTER_BACKEND = "wayland";
 
     # XDG
-    XDG_CURRENT_DESKTOP="Hyprland";
-    XDG_SESSION_TYPE="wayland";
-    XDG_SESSION_DESKTOP="Hyprland";
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_SESSION_TYPE = "wayland";
+    XDG_SESSION_DESKTOP = "Hyprland";
 
     # QT
     QT_AUTO_SCREEN_SCALE_FACTOR="1";
-    QT_QPA_PLATFORM="wayland;xcb";
-    QT_WAYLAND_DISABLE_WINDOWDECORATION="1";
-    QT_QPA_PLATFORMTHEME="kvantum"; # if using kvantum over qt5ct
+    QT_QPA_PLATFORM = "wayland;xcb";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+    QT_QPA_PLATFORMTHEME = "kvantum"; # if using kvantum over qt5ct
   };
 }
