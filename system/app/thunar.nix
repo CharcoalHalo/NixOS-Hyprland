@@ -6,7 +6,7 @@
   programs.thunar = {
     enable = true;
     plugins = with pkgs.xfce; [
-      thuanr-volman
+      thunar-volman
       thunar-archive-plugin
       thunar-media-tags-plugin
     ];
@@ -17,6 +17,7 @@
   environment.systemPackages = with pkgs; [
     ffmpegthumbnailer # video thumbnails
     evince # pdf viewer
+    xarchiver # gui archiver
   ];
 
 }

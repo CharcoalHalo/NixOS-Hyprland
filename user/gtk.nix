@@ -7,7 +7,7 @@
 
     cursorTheme.name = "macOS-BigSur-White";
     cursorTheme.package = pkgs.apple-cursor;
-    cursorTheme.size = 32;
+    cursorTheme.size = 22;
 
     iconTheme.name = "WhiteSur-dark";
     iconTheme.package = pkgs.whitesur-icon-theme;
@@ -16,5 +16,5 @@
     theme.package = pkgs.whitesur-gtk-theme;
 
   };
-  qt.style.package = pkgs.whitesur-kde;
+  qt.style.package = pkgs.whitesur-kde; # for kvantum
 }

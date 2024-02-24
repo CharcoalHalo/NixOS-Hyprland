@@ -1,6 +1,5 @@
-{ pkgs, ... }:
-{
-  services.onedrive.enable = true;
+{ ... }:
+{ 
   services.syncthing = {
     enable = true;
     user = userSettings.username;

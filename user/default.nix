@@ -20,10 +20,6 @@
     blender_4_0
     easyeffects
     audacity
-    xarchiver
-    xfce.thunar
-    xfce.thunar-archive-plugin
-    xfce.thunar-media-tags-plugin
     pavucontrol
     syncthingtray
     gnome-text-editor
