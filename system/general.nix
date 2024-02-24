@@ -11,7 +11,12 @@
   nixpkgs.config.allowUnfree = true;
 
   services.onedrive.enable = true;
-  services.syncthing.enable = true;
+  services.syncthing = {
+    enable = true;
+    user = userSettings.username;
+    dataDir = "/home/${userSettings.username}/Documents";
+    configDir = "/home/${userSettings.username}/.config/syncthing";
+  };
 
   environment.systemPackages = with pkgs; [
     cryptsetup
@@ -24,8 +29,9 @@
   # Bootloader
   boot.loader.grub = {
     enable = true;
-    device = "nodev";
+    devices = [ "nodev" ];
     useOSProber = true;
+    efiSupport = true;
   };
 
   # Networking
