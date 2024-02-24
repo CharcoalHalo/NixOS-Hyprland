@@ -10,6 +10,7 @@
     # ../../system/security/firewall.nix
     ../../system/wm/hyprland.nix
     ../../system/security/polkit.nix
+    ../../system/security/ntfs.nix
   ];
 
   environment.shells = [ pkgs.zsh ];
