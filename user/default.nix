@@ -9,7 +9,6 @@
     strawberry
     vlc
     zoom-us
-    vscodium
     vesktop
     (pkgs.discord.override {
       withVencord = true;
