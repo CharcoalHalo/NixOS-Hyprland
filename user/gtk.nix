@@ -5,6 +5,7 @@
 
     # add font
 
+    # need to add "exec-once hyprctl setcursor theme size" to hyprconfig
     cursorTheme.name = "macOS-BigSur-White";
     cursorTheme.package = pkgs.apple-cursor;
     cursorTheme.size = 24;
