@@ -16,6 +16,7 @@
 
     swayidle
     swaylock
+    wlogout
 
     swww
     rofi-wayland
