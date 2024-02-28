@@ -11,7 +11,13 @@
     userSettings = {
       "window.titleBarStyle" = "custom";
       "[nix]"."editor.tabsize" = 2;
-    }
+      "explorer.confirmDragAndDrop" = false;
+      "git.autofetch" = true;
+      "workbench.startupEditor" = "none";
+      "git.confirmSync" = false;
+      "redhat.telemetry.enabled" = false;
+      "editor.indentSize" = "tabSize";
+    };
   };
   
   programs.eclipse = {
