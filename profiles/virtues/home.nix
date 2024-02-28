@@ -14,6 +14,7 @@
     ../../user/kitty.nix
     ../../user/sh.nix
     ../../user/services.nix
+    ../../user/development.nix
   ];
 
   programs.home-manager.enable = true;
