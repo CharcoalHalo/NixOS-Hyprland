@@ -4,8 +4,9 @@
     # Emulators
     pcsx2
     rpcs3
-    yuzu
-    citra
+    yuzu # rip
+    ryujinx
+    citra # rip
     
     prismlauncher
 
@@ -21,6 +22,6 @@
     mangohud
     goverlay
     protonup-qt
-    osu-lazer-bin
+    osu-lazer # bin won't launch
   ];
 }

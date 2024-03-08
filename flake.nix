@@ -6,13 +6,6 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
 
   let
-    systemSettings = {
-      system = "x86_64-linux";
-      hostname = "virtues";
-      profile = "virtues";
-      timezone = "Pacific/Auckland";
-      locale = "en_NZ.utf8";
-    };
     userSettings = rec {
       username = "fbright";
       name = "Fletcher";
@@ -20,7 +13,7 @@
     };
 
     pkgs = import nixpkgs {
-      system = systemSettings.system;
+      system = "x86_64-linux";
       config = {
         allowUnfree = true;
         permittedInsecurePackages = [ "electron-25.9.0" ];
@@ -32,24 +25,41 @@
   
   in {
     nixosConfigurations = {
-      system = lib.nixosSystem {
-        system = systemSettings.system;
-        modules = [ (./. + "/profiles"+("/"+systemSettings.profile)+"/configuration.nix") ];
+      virtues = lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [ ./profiles/virtues/configuration.nix ];
         specialArgs = {
           inherit inputs;
-          inherit systemSettings;
+          inherit userSettings;
+        };
+      };
+
+      crisis = lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [ ./profiles/crisis/configuration.nix ];
+        specialArgs = {
+          inherit inputs;
           inherit userSettings;
         };
       };
     };
 
     homeConfigurations = {
-      user = home-manager.lib.homeManagerConfiguration {
+      virtues = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ (./. + "/profiles"+("/"+systemSettings.profile)+"/home.nix") ];
+        modules = [ ./profiles/virtues/home.nix ];
         extraSpecialArgs = {
-          inherit systemSettings;
           inherit userSettings;
+          inherit inputs;
+        };
+      };
+
+      crisis = home-manager.lib.homeManagerConfiguration {
+        # inherit pkgs;
+        modules = [ ./profiles/crisis/home.nix ]; 
+        extraSpecialArgs = {
+          inherit userSettings;
+          inherit inputs;
         };
       };
     };
@@ -65,5 +75,7 @@
     blender-bin.url = "github:edolstra/nix-warez?dir=blender";
 
     hyprland.url = "github:hyprwm/Hyprland";
+
+    spicetify-nix.url = "github:the-argus/spicetify-nix";
   };
 }

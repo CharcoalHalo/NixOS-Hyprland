@@ -15,8 +15,9 @@
     ../../user/sh.nix
     ../../user/services.nix
     ../../user/development.nix
+    ../../user/spicetify.nix
   ];
-
+  
   programs.home-manager.enable = true;
 
   home.stateVersion = "23.11";

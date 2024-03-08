@@ -1,8 +1,8 @@
 { pkgs, ... }:
 let
   myAliases = {
-    nix-switch = "sudo nixos-rebuild switch --flake ~/.nix-config#system";
-    home-switch = "home-manager switch --flake ~/.nix-config#user";
+    nix-switch-virtues = "sudo nixos-rebuild switch --flake ~/.nix-config#virtues";
+    home-switch-virtues = "home-manager switch --flake ~/.nix-config#virtues";
   };
 
 in {

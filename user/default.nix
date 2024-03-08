@@ -1,7 +1,10 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    spotify
+    gnome.nautilus
+    gnome.eog
+    mullvad-vpn
+    filezilla
     krita
     qbittorrent
     r2modman

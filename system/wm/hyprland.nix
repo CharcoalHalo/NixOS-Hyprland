@@ -14,12 +14,15 @@
     wl-clipboard
     cliphist
 
-    swayidle
-    swaylock
+    #swayidle
+    #swaylock
     wlogout
+    hypridle
+    hyprlock
+    libnotify
 
     swww
-    rofi-wayland
+    # rofi-wayland
     dunst
     waybar
     libsForQt5.qtstyleplugin-kvantum
@@ -27,6 +30,7 @@
 
   ];
 
+  # so i don't have to compile it
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
@@ -36,6 +40,11 @@
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     xwayland.enable = true;
+  };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   services.gnome.gnome-keyring.enable = true;

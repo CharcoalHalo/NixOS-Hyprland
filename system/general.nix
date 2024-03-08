@@ -1,4 +1,4 @@
-{ pkgs, systemSettings, userSettings, ...}:
+{ pkgs, userSettings, ...}:
 {
   # User account 
   users.users.${userSettings.username} = {
@@ -26,27 +26,20 @@
     efiSupport = true;
   };
 
-  # Networking
-  networking.hostName = systemSettings.hostname;
-  networking.networkmanager.enable = true;
-
   # Timezone and locale 
-  time.timeZone = systemSettings.timezone; # time zone
-  i18n.defaultLocale = systemSettings.locale;
+  time.timeZone = "Pacific/Auckland"; # time zone
+  i18n.defaultLocale = "en_NZ.utf8";
   i18n.extraLocaleSettings = {
-    LC_ADDRESS = systemSettings.locale;
-    LC_IDENTIFICATION = systemSettings.locale;
-    LC_MEASUREMENT = systemSettings.locale;
-    LC_MONETARY = systemSettings.locale;
-    LC_NAME = systemSettings.locale;
-    LC_NUMERIC = systemSettings.locale;
-    LC_PAPER = systemSettings.locale;
-    LC_TELEPHONE = systemSettings.locale;
-    LC_TIME = systemSettings.locale;
+    LC_ADDRESS = "en_NZ.utf8";
+    LC_IDENTIFICATION = "en_NZ.utf8";
+    LC_MEASUREMENT = "en_NZ.utf8";
+    LC_MONETARY = "en_NZ.utf8";
+    LC_NAME = "en_NZ.utf8";
+    LC_NUMERIC = "en_NZ.utf8";
+    LC_PAPER = "en_NZ.utf8";
+    LC_TELEPHONE = "en_NZ.utf8";
+    LC_TIME = "en_NZ.utf8";
   };
-
-  # Fix time when using dual boot
-  time.hardwareClockInLocalTime = true;
 
   system.stateVersion = "23.11";
 }

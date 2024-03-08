@@ -1,12 +1,13 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [ openjdk17 ];
+  home.packages = with pkgs; [ openjdk21 bluej ];
 
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
-      
+      # nixpkgs are not up to date most of the time
+      # https://github.com/nix-community/nix-vscode-extensions
     ];
     userSettings = {
       "window.titleBarStyle" = "custom";
@@ -17,6 +18,7 @@
       "git.confirmSync" = false;
       "redhat.telemetry.enabled" = false;
       "editor.indentSize" = "tabSize";
+      "telemetry.enableTelemetry" = false;
     };
   };
   
@@ -25,5 +27,6 @@
     plugins = [
 
     ];
+    package = pkgs.eclipses.eclipse-java;
   };
 }

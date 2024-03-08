@@ -1,8 +1,4 @@
-{ pkgs, lib, config, systemSettings, userSettings, ... }:
-let
- sysdir = "../../system";
-
-in
+{ pkgs, userSettings, ... }:
 {
   imports = [
     ../../system/general.nix
@@ -26,6 +22,13 @@ in
     ../../system/wm/hyprland.nix
 
   ];
+  # Fix time when using dual boot
+  time.hardwareClockInLocalTime = true;
+
+  # Networking
+  networking.hostName = "virtues";
+  networking.networkmanager.enable = true;
+
 
   environment.shells = [ pkgs.zsh ];
   users.defaultUserShell = pkgs.zsh;
