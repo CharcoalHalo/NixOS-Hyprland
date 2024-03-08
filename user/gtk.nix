@@ -17,5 +17,6 @@
     theme.package = pkgs.whitesur-gtk-theme;
 
   };
-  qt.style.package = pkgs.whitesur-kde; # for kvantum
+
+  qt.style.package = pkgs.whitesur-kde;
 }

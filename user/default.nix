@@ -1,8 +1,6 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    libsForQt5.dolphin
-    gnome.nautilus
     gnome.eog
     mullvad-vpn
     filezilla
@@ -21,12 +19,11 @@
     keepassxc
     backintime
     blender_4_0
-    easyeffects
     audacity
     pavucontrol
     syncthingtray
     gnome-text-editor
-    qdirstat
+    filelight
     gparted
     isoimagewriter
     joplin-desktop
@@ -36,5 +33,7 @@
     reaper
     shattered-pixel-dungeon
     thunderbird
+
+    libsForQt5.qt5ct
   ];
 }

@@ -4,6 +4,20 @@
 
   environment.systemPackages = with pkgs; [ polkit_gnome ];
 
+
+  # allow mounting from file managers like thuanr
+  security.polkit.extraConfig = ''
+    polkit.addRule(function(action, subject) {
+      if (subject.isInGroup("wheel")) {
+        if (action.id.startsWith("org.freedesktop.udisks2.")) {
+          return polkit.Result.YES;
+        }
+      }
+    });
+  '';
+
+  # create systemd user service to autostart gnome_polkit
+  # needed for hyprland
   systemd = {
   user.services.polkit-gnome-authentication-agent-1 = {
     description = "polkit-gnome-authentication-agent-1";
