@@ -14,8 +14,6 @@
     wl-clipboard
     cliphist
 
-    #swayidle
-    #swaylock
     wlogout
     hypridle
     hyprlock
@@ -25,8 +23,6 @@
     # rofi-wayland
     dunst
     waybar
-    libsForQt5.qtstyleplugin-kvantum
-    catppuccin-kvantum
 
   ];
 

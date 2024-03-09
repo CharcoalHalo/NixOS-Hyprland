@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    flameshot
     gnome.eog
     mullvad-vpn
     filezilla
@@ -33,7 +34,9 @@
     reaper
     shattered-pixel-dungeon
     thunderbird
-
+    # theming 
     libsForQt5.qt5ct
+    libsForQt5.qtstyleplugin-kvantum
+    pywal
   ];
 }

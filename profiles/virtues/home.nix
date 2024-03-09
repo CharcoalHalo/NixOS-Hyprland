@@ -16,6 +16,7 @@
     ../../user/services.nix
     ../../user/development.nix
     ../../user/spicetify.nix
+    ../../user/rofi.nix
   ];
   
   programs.home-manager.enable = true;
