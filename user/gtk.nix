@@ -18,5 +18,5 @@
 
   };
 
-  qt.style.package = pkgs.whitesur-kde;
+  qt.style.package = pkgs.whitesur-kde; # adds mojave theme to kvantum
 }

@@ -4,9 +4,9 @@
     # Emulators
     pcsx2
     rpcs3
-    yuzu # rip
+    # yuzu # rip
     ryujinx
-    citra # rip
+    # citra # rip
     
     prismlauncher
 
