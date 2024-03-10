@@ -1,7 +1,8 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    flameshot
+    pamixer
+    playerctl
     gnome.eog
     mullvad-vpn
     filezilla

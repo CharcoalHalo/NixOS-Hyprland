@@ -17,6 +17,7 @@
     ../../user/development.nix
     ../../user/spicetify.nix
     ../../user/rofi.nix
+    ../../user/vim.nix
   ];
   
   programs.home-manager.enable = true;
