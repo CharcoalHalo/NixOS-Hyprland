@@ -1,7 +1,5 @@
 {
-  description = "My Flake";
-
-
+  description = "CharcoalHalo's NixOS & Hyprland Flake";
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
 
@@ -72,6 +70,7 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    # blender with builtin cuda support
     blender-bin.url = "github:edolstra/nix-warez?dir=blender";
 
     hyprland.url = "github:hyprwm/Hyprland";
