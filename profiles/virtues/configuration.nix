@@ -2,7 +2,18 @@
 {
   imports = [
     ./hardware-configuration.nix
-    
+    #apps
+    ../../system/apps/openrazer.nix
+    ../../system/apps/thunar.nix
+    ../../system/apps/virt-manager.nix
+    #hyprland
+    ../../system/hyprland/hyprland.nix
+    #general
+    ../../system/general.nix
+    #../../system/firewall.nix
+    ../../system/nvidia.nix
+    ../../system/pipewire.nix
+    ../../system/services.nix
   ];
 
   # Bootloader

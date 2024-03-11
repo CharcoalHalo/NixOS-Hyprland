@@ -1,4 +1,4 @@
-{ userSettings, ... }:
+{ pkgs, userSettings, ... }:
 {
   services.mullvad-vpn = {
     enable = true;

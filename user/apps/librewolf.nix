@@ -1,6 +1,6 @@
 { pkgs, userSettings, ... }:
 {
-  programss.librewolf.enable = true;
+  programs.librewolf.enable = true;
   
   home.file.".librewolf/librewolf.overrides.cfg".text = ''
     defaultPref("identity.fxaccounts.enabled", true);     

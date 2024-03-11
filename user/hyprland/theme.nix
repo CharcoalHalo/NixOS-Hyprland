@@ -3,9 +3,10 @@
   home.packages = with pkgs; [
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
-    pywal
   ];
   
+  programs.pywal.enable = true; # adds pywal for zsh, kitty, rofi, nvim
+
   gtk = {
     enable = true;
 
