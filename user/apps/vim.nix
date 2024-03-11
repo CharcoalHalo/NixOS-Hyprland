@@ -1,11 +1,9 @@
-{ pkgs, ... }:
+{ ... }:
 {
-  home.packages = with pkgs; [];
-
   programs.neovim = {
     enable = true;
     viAlias = true;
-    vimAlsia = true;
+    vimAlias = true;
 
     extraConfig = ''
     

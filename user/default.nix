@@ -1,43 +1,50 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    # system stuff
     pamixer
     playerctl
     gnome.eog
-    mullvad-vpn
-    filezilla
-    krita
-    qbittorrent
-    r2modman
-    shotcut
-    strawberry
+    gnome.gnome-calculator
+    gnome-text-editor
     vlc
+    pavucontrol
+    rsync
+    backintime
+    syncthingtray
+    filelight
+    gparted
+    isoimagewriter
+
+    # Creative Tools
+    blender_4_0
+    krita
+    shotcut
+    audacity
+    reaper
+
+    ungoogled-chromium
+    libreoffice
+    filezilla
+    qbittorrent
+    obsidian
+    strawberry
     zoom-us
     vesktop
     (pkgs.discord.override {
       withVencord = true;
     })
+    arrpc
     motrix
     keepassxc
-    backintime
-    blender_4_0
-    audacity
-    pavucontrol
-    syncthingtray
-    gnome-text-editor
-    filelight
-    gparted
-    isoimagewriter
-    joplin-desktop
-    libreoffice
-    obs-studio
-    obs-studio-plugins.wlrobs
-    reaper
-    shattered-pixel-dungeon
     thunderbird
-    # theming 
-    libsForQt5.qt5ct
-    libsForQt5.qtstyleplugin-kvantum
-    pywal
+
   ];
+
+  programs.obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+    ];
+  };
 }

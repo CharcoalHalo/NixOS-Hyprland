@@ -6,6 +6,5 @@
     font-awesome
     nerdfonts
     jetbrains-mono
-    
   ];
 }

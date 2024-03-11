@@ -1,7 +1,7 @@
 { pkgs, userSettings, ... }:
 {
-  home.packages = with pkgs; [ librewolf ungoogled-chromium ];
-
+  programss.librewolf.enable = true;
+  
   home.file.".librewolf/librewolf.overrides.cfg".text = ''
     defaultPref("identity.fxaccounts.enabled", true);     
     

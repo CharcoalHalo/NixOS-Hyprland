@@ -1,5 +1,11 @@
 { pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    libsForQt5.qt5ct
+    libsForQt5.qtstyleplugin-kvantum
+    pywal
+  ];
+  
   gtk = {
     enable = true;
 

@@ -4,6 +4,9 @@
 
   environment.systemPackages = with pkgs; [ polkit_gnome ];
 
+  services.gnome.gnome-keyring.enable = true;
+  sercurity.pam.services.login.enableGnomeKeyring = true; # will try to unlock keyring on login 
+
 
   # allow mounting from file managers like thuanr
   security.polkit.extraConfig = ''

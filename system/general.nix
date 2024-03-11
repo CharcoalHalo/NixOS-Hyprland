@@ -11,20 +11,12 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    cryptsetup
-    home-manager
+    cryptsetup # luks unlock
+    home-manager # home folder managment
   ];
   
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Bootloader
-  boot.loader.grub = {
-    enable = true;
-    devices = [ "nodev" ];
-    useOSProber = true;
-    efiSupport = true;
-  };
 
   # Timezone and locale 
   time.timeZone = "Pacific/Auckland"; # time zone

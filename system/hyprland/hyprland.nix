@@ -1,32 +1,32 @@
 { inputs, pkgs, ... }:
 {
   imports = [ 
-    ./pipewire.nix
-    ./dbus.nix 
     ./fonts.nix
+    ./polkit.nix
+    ./xdg.nix
     ];
 
   environment.systemPackages = with pkgs; [
     hyprland-protocols
+    hyprpicker
+    hypridle
+    hyprlock
+
     grimblast
     nwg-displays
-    hyprpicker
     wl-clipboard
     cliphist
 
     wlogout
-    hypridle
-    hyprlock
     libnotify
 
     swww
-    # rofi-wayland
     dunst
     waybar
 
   ];
 
-  # so i don't have to compile it
+  # so you don't have to compile it
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
@@ -38,21 +38,19 @@
     xwayland.enable = true;
   };
 
+  services.dbus.enable = true;
+  programs.dconf.enable = true;
+  
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
-  services.gnome.gnome-keyring.enable = true;
-
-  # So swalock works
-  security = {
-    pam.services.swaylock = {
-      text = ''
-        auth include login
-      '';
-    };
-    pam.services.login.enableGnomeKeyring = true;
+  # So hyprlock works
+  security.pam.services.hyprlock = {
+    text = ''
+      auth include login
+    '';
   };
 
   environment.sessionVariables = {
