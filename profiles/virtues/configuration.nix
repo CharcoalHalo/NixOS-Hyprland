@@ -22,7 +22,11 @@
     devices = [ "nodev" ];
     useOSProber = true;
     efiSupport = true;
+    configurationLimit = 50;
   };
+
+  # creates hard links of duplicate files in the nix store
+  nix.settings.auto-optimise-store = true;
 
   # Fix time when using dual boot
   time.hardwareClockInLocalTime = true;
