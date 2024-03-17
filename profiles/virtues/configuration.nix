@@ -10,7 +10,7 @@
     ../../system/hyprland/hyprland.nix
     #general
     ../../system/general.nix
-    #../../system/firewall.nix
+    ../../system/networking.nix
     ../../system/nvidia.nix
     ../../system/pipewire.nix
     ../../system/services.nix
@@ -30,10 +30,6 @@
 
   # Fix time when using dual boot
   time.hardwareClockInLocalTime = true;
-
-  # Networking
-  networking.hostName = "virtues";
-  networking.networkmanager.enable = true;
 
   # NTFS support
   boot.supportedFilesystems = [ "ntfs" ];
