@@ -3,7 +3,6 @@
   imports = [ 
     ./fonts.nix
     ./polkit.nix
-    ./xdg.nix
     ];
 
   environment.systemPackages = with pkgs; [
@@ -23,6 +22,7 @@
     swww
     dunst
     waybar
+    xdg-utils
 
   ];
 
@@ -43,6 +43,7 @@
   
   xdg.portal = {
     enable = true;
+    xdgOpenUsePortal = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
@@ -68,7 +69,7 @@
 
     # Toolkit
     GDK_BACKEND = "wayland,x11";
-    SDL_VIDEODRIVER = "wayland,x11"; # can cause issues in games
+    #SDL_VIDEODRIVER = "wayland,x11"; # can cause issues in games
     CLUTTER_BACKEND = "wayland";
 
     # XDG
