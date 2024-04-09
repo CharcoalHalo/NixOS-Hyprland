@@ -16,7 +16,7 @@
         allowUnfree = true;
         permittedInsecurePackages = [ "electron-25.9.0" ];
       };
-      overlays = [ inputs.blender-bin.overlays.default ];
+      # overlays = [ inputs.blender-bin.overlays.default ];
     };
 
     lib = nixpkgs.lib;
@@ -71,7 +71,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # blender with builtin cuda support
-    blender-bin.url = "github:edolstra/nix-warez?dir=blender";
+    # blender-bin.url = "github:edolstra/nix-warez?dir=blender";
 
     hyprland.url = "github:hyprwm/Hyprland";
 

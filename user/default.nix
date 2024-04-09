@@ -17,7 +17,8 @@
     isoimagewriter
 
     # Creative Tools
-    blender_4_0
+    # blender_4_0 # for blender bin
+    blender-hip
     krita
     shotcut
     audacity
