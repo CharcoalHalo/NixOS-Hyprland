@@ -19,6 +19,7 @@
     ../../user/gaming.nix
     ../../user/services.nix
     ../../user/sh.nix
+    ../../user/xdg.nix
   ];
   
   programs.home-manager.enable = true;

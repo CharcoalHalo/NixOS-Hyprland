@@ -1,17 +1,19 @@
 { pkgs, userSettings, ... }:
 {
+  # Still not working
   xdg = {
     enable = true;
-
-    xdg.mime = {
-      enable = true;
-
+    mime.enable = true; # always true on linux
+    mimeApps.defaultApplications = {
+      "application/zip" = [ "org.gnome.FileRoller.desktop" ];
     };
+    # to add mime types edit .config/mimeapps.list
 
-    xdg.userDirs ={
+    userDirs ={
       enable = true;
-      desktop = "${home.homeDirectory}/Desktop";
-      download = "${home.homeDirectory}/Downloads";
+      desktop = "/home/${userSettings.username}/Desktop";
+      download = "/home/${userSettings.username}/Downloads";
+      onedrive = "/home/${userSettings.username}/OneDrive";
     };
   };
 }
