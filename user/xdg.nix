@@ -13,7 +13,10 @@
       enable = true;
       desktop = "/home/${userSettings.username}/Desktop";
       download = "/home/${userSettings.username}/Downloads";
-      onedrive = "/home/${userSettings.username}/OneDrive";
+      
+      extraConfig = {
+        OneDrive = "/home/${userSettings.username}/OneDrive";
+      };
     };
   };
 }
