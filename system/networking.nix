@@ -5,16 +5,11 @@
   networking.networkmanager.enable = true;
 
   networking.firewall.enable = true;
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 30298 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
 
-  # for sunshine/moonlight discovery
-  services.avahi= {
-    enable = false;
-    ipv4 = true;
-    ipv6 = false;
-    wideArea = false;
-    publish.userServices = true;
+  services.zerotierone = {
+    enable = true;
   };
 
   services.openssh = {

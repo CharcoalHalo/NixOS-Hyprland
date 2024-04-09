@@ -43,7 +43,7 @@
   
   xdg.portal = {
     enable = true;
-    xdgOpenUsePortal = true;
+    xdgOpenUsePortal = false;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
@@ -56,6 +56,7 @@
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1"; # enables wayland for electron
+    NIXOS_XDG_OPEN_USE_PORTAL = "1";
 
     WLR_NO_HARDWARE_CURSORS = "1"; # if cursor invisible 
     EDITOR = "nano";
@@ -76,6 +77,9 @@
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_SESSION_TYPE = "wayland";
     XDG_SESSION_DESKTOP = "Hyprland";
+
+    # GTK
+    GTK_USE_PORTAL = "1";
 
     # QT
     QT_AUTO_SCREEN_SCALE_FACTOR="1";

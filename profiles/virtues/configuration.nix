@@ -11,7 +11,7 @@
     #general
     ../../system/general.nix
     ../../system/networking.nix
-    ../../system/nvidia.nix
+    ../../system/gpudrivers.nix
     ../../system/pipewire.nix
     ../../system/services.nix
   ];
