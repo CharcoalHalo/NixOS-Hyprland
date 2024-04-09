@@ -5,6 +5,14 @@
     libsForQt5.qtstyleplugin-kvantum
   ];
   
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    package = pkgs.apple-cursor;
+    name = "macOS-BigSur-White";
+    size = 24;
+  };
+
   programs.pywal.enable = true; # adds pywal for zsh, kitty, rofi, nvim
 
   gtk = {
