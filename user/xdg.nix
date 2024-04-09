@@ -15,7 +15,7 @@
       download = "/home/${userSettings.username}/Downloads";
       
       extraConfig = {
-        OneDrive = "/home/${userSettings.username}/OneDrive";
+        XDG_ONEDRIVE_DIR = "/home/${userSettings.username}/OneDrive";
       };
     };
   };
