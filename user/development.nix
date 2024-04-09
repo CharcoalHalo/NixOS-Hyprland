@@ -1,6 +1,10 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [ openjdk21 bluej cppcheck ];
+  home.packages = with pkgs; [ 
+    openjdk21
+    bluej 
+    cppcheck 
+    ];
 
   programs.vscode = {
     enable = true;

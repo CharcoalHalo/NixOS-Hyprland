@@ -3,7 +3,7 @@
   home.packages = with pkgs; [
     neofetch
     cava
-    nvtop
+    nvtopPackages.full
     btop
     pciutils
     usbutils

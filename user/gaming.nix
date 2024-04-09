@@ -13,8 +13,8 @@
     lutris
     heroic
     r2modman
-    osu-lazer # bin won't launch
-    # osu-lazer-bin
+    # osu-lazer # bin won't launch
+    osu-lazer-bin
     shattered-pixel-dungeon
 
     # Tools 
@@ -25,15 +25,6 @@
     mangohud
     goverlay
     protonup-qt
-    #sunshine
 
   ];
-
-  # systemd.user.services = {
-  #     sunshine = {
-  #       Unit.Description = "Sunshine is a Game stream host for Moonlight.";
-  #       Service.ExecStart = "${pkgs.sunshine}/bin/sunshine";
-  #       Install.WantedBy = [ "graphical-session.target" ];
-  #     };
-  # };
 }
