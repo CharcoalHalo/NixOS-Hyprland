@@ -63,10 +63,10 @@
     BROWSER = "librewolf";
     TERMINAL = "kitty";
 
-    # Nvidia 
-    GBM_BACKEND = "nvidia-drm";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    LIBVA_DRIVER_NAME = "nvidia"; # hardware acceleration
+    # Nvidia bye bye
+    #GBM_BACKEND = "nvidia-drm";
+    #__GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    #LIBVA_DRIVER_NAME = "nvidia"; # hardware acceleration
 
     # Toolkit
     GDK_BACKEND = "wayland,x11";
