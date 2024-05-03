@@ -5,7 +5,11 @@
   hardware.openrazer = {
     enable = true;
     users = [ userSettings.username ];
-    batteryNotifier = true;
+    batteryNotifier = {
+      enable = true;
+      percentage = 25;
+      frequency = 300; # 5min
+    };
     devicesOffOnScreensaver = true;
   };
 }

@@ -10,11 +10,8 @@
     #hyprland
     ../../modules/nixos/system/hyprland/hyprland.nix
     #general
-    ../../modules/nixos/systemPackages.nix
     ../../modules/nixos/system/networking.nix
-    ../../modules/nixos/system/gpudrivers.nix
     ../../modules/nixos/system/pipewire.nix
-    ../../modules/nixos/system/services.nix
   ];
   
   nixpkgs.config.allowUnfree = true;
