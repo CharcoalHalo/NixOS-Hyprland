@@ -3,6 +3,7 @@ let
   myAliases = {
     nix-switch-virtues = "sudo nixos-rebuild switch --flake ~/.nix-config#virtues";
     home-switch-virtues = "home-manager switch --flake ~/.nix-config#virtues";
+    darwin-switch-mac = "darwin-rebuild switch --flake ~/.config/nix-darwin#Fletchers-MacBook-Air";
   };
 
 in {

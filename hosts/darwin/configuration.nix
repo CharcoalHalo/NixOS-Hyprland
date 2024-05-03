@@ -29,13 +29,15 @@ let user = "fbright"; in
   };
 
   system = {
-    # Used for backwards compatibility read changelog before changing
-    # $ darwin-rebuild changelog
-    stateVersion = 4;
     defaults = {
       # 120, 90, 60, 30, 12, 6, 2
       KeyRepeat = 2;
     };
+
+
+    # Used for backwards compatibility read changelog before changing
+    # $ darwin-rebuild changelog
+    stateVersion = 4;
   };
 
   nixpkgs.hostPlatform = "aarch64-darwin";

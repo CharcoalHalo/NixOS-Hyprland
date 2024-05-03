@@ -11,7 +11,7 @@
     pavucontrol
     rsync
     backintime
-    syncthingtray
+    syncthingtray-minimal
     filelight
     gparted
     isoimagewriter

@@ -3,7 +3,10 @@
   home.packages = with pkgs; [ 
     openjdk21
     bluej 
+
+    # C tools 
     cppcheck 
+    valgrind
     ];
 
   programs.vscode = {

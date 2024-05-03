@@ -19,12 +19,15 @@
 
     # Tools 
     wine-staging
+    wine-wayland
     winetricks
     gamemode
     gamescope
     mangohud
     goverlay
     protonup-qt
+
+    lact # overclocking
 
   ];
 }

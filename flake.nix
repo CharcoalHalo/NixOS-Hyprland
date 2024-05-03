@@ -1,7 +1,8 @@
 {
   description = "CharcoalHalo's NixOS & Hyprland Flake";
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nix-darwin, nix-homebrew, 
+              homebrew-bundle, homebrew-cask, homebrew-core, ... } @inputs:
 
   let
     userSettings = rec {
@@ -16,7 +17,6 @@
         allowUnfree = true;
         permittedInsecurePackages = [ "electron-25.9.0" ];
       };
-      # overlays = [ inputs.blender-bin.overlays.default ];
     };
 
     lib = nixpkgs.lib;
@@ -25,44 +25,52 @@
     nixosConfigurations = {
       virtues = lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [ ./profiles/virtues/configuration.nix ];
-        specialArgs = {
-          inherit inputs;
-          inherit userSettings;
-        };
-      };
-
-      crisis = lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [ ./profiles/crisis/configuration.nix ];
+        modules = [ ./hosts/virtues/configuration.nix ];
         specialArgs = {
           inherit inputs;
           inherit userSettings;
         };
       };
     };
-
+    # Standalone home-manager allows for rootless updates
     homeConfigurations = {
       virtues = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./profiles/virtues/home.nix ];
-        extraSpecialArgs = {
-          inherit userSettings;
-          inherit inputs;
-        };
-      };
-
-      crisis = home-manager.lib.homeManagerConfiguration {
-        # inherit pkgs;
-        modules = [ ./profiles/crisis/home.nix ]; 
+        modules = [ ./hosts/virtues/home-manager.nix ];
         extraSpecialArgs = {
           inherit userSettings;
           inherit inputs;
         };
       };
     };
-  };
 
+    darwinConfigurations."Fletchers-MacBook-Air" = nix-darwin.lib.darwinSystem {
+      modules = [
+        ./host/darwin/configuration.nix
+        home-manager.darwinModules.home-manager
+        nix-homebrew.darwinModules.nix-homebrew
+        {
+          nix-homebrew = {
+            # Install under default prefix and install for Rosetta
+            enable = true;
+            enableRosetta = false;
+
+            # User owning the Homebrew prefix
+            user = "${userSettings.username}";
+
+            taps = {
+              "homebrew/homebrew-core" = homebrew-core;
+              "homebrew/homebrew-cask" = homebrew-cask;
+              "homebrew/homebrew-bundle" = homebrew-bundle;
+            };
+            mutableTaps = false;
+            # Automatically migrate existing Homebrew installs
+            # autoMigrate = false;
+          };
+        }
+      ];
+    };
+  };
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
@@ -70,11 +78,27 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # blender with builtin cuda support
-    # blender-bin.url = "github:edolstra/nix-warez?dir=blender";
-
+    # NixOS
     hyprland.url = "github:hyprwm/Hyprland";
-
     spicetify-nix.url = "github:the-argus/spicetify-nix";
+
+    # Macos
+    nix-darwin.url = "github:LnL7/nix-darwin";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-homebrew = {
+      url = "github:zhaofengli-wip/nix-homebrew";
+    };
+    homebrew-bundle = {
+      url = "github:homebrew/homebrew-bundle";
+      flake = false;
+    };
+    homebrew-core = {
+      url = "github:homebrew/homebrew-core";
+      flake = false;
+    };
+    homebrew-cask = {
+      url = "github:homebrew/homebrew-cask";
+      flake = false;
+    }; 
   };
 }
