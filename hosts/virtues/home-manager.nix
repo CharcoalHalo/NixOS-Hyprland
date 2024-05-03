@@ -9,12 +9,11 @@
     ../../modules/nixos/home-manager/apps/kitty.nix
     ../../modules/nixos/home-manager/apps/librewolf.nix
     ../../modules/nixos/home-manager/apps/spicetify.nix
-    ../../modules/nixos/home-manager/apps/vim.nix
+    ../../modules/nixos/home-manager/apps/neovim.nix
     ../../modules/nixos/home-manager/hyprland/hyprconf.nix
     ../../modules/nixos/home-manager/hyprland/hypridle+lock.nix
     ../../modules/nixos/home-manager/hyprland/rofi.nix
     ../../modules/nixos/home-manager/hyprland/theme.nix
-    ../../modules/nixos/home-manager/cli-apps.nix
     ../../modules/nixos/home-manager/apps/development.nix
     ../../modules/nixos/home-manager/apps/gaming.nix
     ../../modules/nixos/home-manager/services.nix

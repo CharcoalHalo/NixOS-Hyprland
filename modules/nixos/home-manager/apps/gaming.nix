@@ -18,7 +18,7 @@
     shattered-pixel-dungeon
 
     # Tools 
-    wine-staging
+    # wine-staging
     wine-wayland
     winetricks
     gamemode
