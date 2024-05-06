@@ -1,7 +1,8 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    sddm-chili-theme
+    libsForQt5.qt5.qtquickcontrols2
+    libsForQt5.qt5.qtgraphicaleffects
   ];
   services.displayManager.sddm = {
     enable = true;
