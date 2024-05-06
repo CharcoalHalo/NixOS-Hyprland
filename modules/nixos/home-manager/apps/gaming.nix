@@ -9,7 +9,7 @@
     # citra # rip
     
     prismlauncher
-    steam
+    # steam
     lutris
     heroic
     r2modman
@@ -21,13 +21,10 @@
     # wine-staging
     wine-wayland
     winetricks
-    gamemode
-    gamescope
+    # gamemode
+    # gamescope
     mangohud
     goverlay
     protonup-qt
-
-    lact # overclocking
-
   ];
 }
