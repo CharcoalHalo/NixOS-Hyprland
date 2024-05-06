@@ -32,6 +32,8 @@
     theme.package = pkgs.whitesur-gtk-theme;
 
   };
-
-  qt.style.package = pkgs.whitesur-kde; # adds mojave theme to kvantum
+  qt = {
+    enable = true;
+    style.package = pkgs.whitesur-kde; # adds mojave theme to kvantum
+  };
 }

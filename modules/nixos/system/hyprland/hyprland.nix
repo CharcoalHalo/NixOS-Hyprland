@@ -3,6 +3,7 @@
   imports = [ 
     ./fonts.nix
     ./polkit.nix
+    ./sddm.nix
     ];
 
   environment.systemPackages = with pkgs; [
@@ -55,19 +56,13 @@
   };
 
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1"; # enables wayland for electron
+    NIXOS_OZONE_WL = "1"; # set wayland flags for electron apps
     NIXOS_XDG_OPEN_USE_PORTAL = "1";
 
    
     EDITOR = "nano";
     BROWSER = "librewolf";
     TERMINAL = "kitty";
-
-    # Nvidia
-    #GBM_BACKEND = "nvidia-drm";
-    #__GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    #LIBVA_DRIVER_NAME = "nvidia"; # hardware acceleration
-    # WLR_NO_HARDWARE_CURSORS = "1"; # if cursor invisible 
 
     # Toolkit
     GDK_BACKEND = "wayland,x11";
