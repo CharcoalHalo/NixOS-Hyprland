@@ -46,7 +46,7 @@
 
     darwinConfigurations."Fletchers-MacBook-Air" = nix-darwin.lib.darwinSystem {
       modules = [
-        ./host/darwin/configuration.nix
+        ./hosts/darwin/configuration.nix
         home-manager.darwinModules.home-manager
         nix-homebrew.darwinModules.nix-homebrew
         {
