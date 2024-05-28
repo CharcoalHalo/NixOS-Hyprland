@@ -9,20 +9,16 @@
     # citra # rip
     
     prismlauncher
-    # steam
     lutris
     heroic
     r2modman
     # osu-lazer # bin won't launch
-    osu-lazer-bin
+    # osu-lazer-bin
     shattered-pixel-dungeon
 
     # Tools 
-    # wine-staging
     wine-wayland
     winetricks
-    # gamemode
-    # gamescope
     mangohud
     goverlay
     protonup-qt
