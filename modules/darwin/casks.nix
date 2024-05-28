@@ -2,5 +2,14 @@
 _:
 [
   "syncthing"
+  "eclipse-java"
   "discord"
+  "onedrive"
+  "blender"
+  "firefox"
+  "linearmouse"
+  "heroic"
+  "steam"
+  "betterdisplay"
+  "stats"
 ]

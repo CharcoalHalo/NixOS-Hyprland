@@ -5,8 +5,8 @@ let user = "fbright"; in
   imports = [
     ../../modules/darwin/home-manager.nix
   ];
-  environment.systemPackages = [
-    pkgs.vim
+  environment.systemPackages = with pkgs; [
+    neovim
   ];
   nixpkgs.config.allowUnfree = true;
   # Auto upgrade nix package and the daemon service.
@@ -38,6 +38,11 @@ let user = "fbright"; in
     # Used for backwards compatibility read changelog before changing
     # $ darwin-rebuild changelog
     stateVersion = 4;
+  };
+
+  homebrew = {
+    enable = true;
+    casks = pkgs.callPackage ../../modules/darwin/casks.nix {};
   };
 
   nixpkgs.hostPlatform = "aarch64-darwin";
