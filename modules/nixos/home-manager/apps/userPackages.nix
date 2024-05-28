@@ -17,7 +17,6 @@
     isoimagewriter
 
     # Creative Tools
-    # blender_4_0 # for blender bin
     blender-hip
     krita
     shotcut
@@ -35,7 +34,6 @@
     (pkgs.discord.override {
       withVencord = true;
     })
-    arrpc
     motrix
     keepassxc
     thunderbird

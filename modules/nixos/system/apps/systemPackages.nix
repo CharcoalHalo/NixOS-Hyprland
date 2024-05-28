@@ -11,7 +11,7 @@
     home-manager # home folder managment
     neofetch
     tree
-    nvtopPackages.full
+    nvtopPackages.amd
     pciutils
     usbutils
     wget

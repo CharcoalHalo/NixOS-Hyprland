@@ -9,8 +9,6 @@
   environment.systemPackages = with pkgs; [
     hyprland-protocols
     hyprpicker
-    hypridle
-    hyprlock
 
     grimblast
     nwg-displays
@@ -49,11 +47,7 @@
   };
 
   # So hyprlock works
-  security.pam.services.hyprlock = {
-    text = ''
-      auth include login
-    '';
-  };
+  security.pam.services.hyprlock = {};
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1"; # set wayland flags for electron apps
@@ -82,6 +76,6 @@
     QT_QPA_PLATFORM = "wayland;xcb";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     QT_QPA_PLATFORMTHEME="qt5ct";
-    QT_STYLE_OVERRIDE = "kvantum"; # if using kvantum over qt5ct
+    # QT_STYLE_OVERRIDE = "kvantum"; # if using kvantum over qt5ct
   };
 }

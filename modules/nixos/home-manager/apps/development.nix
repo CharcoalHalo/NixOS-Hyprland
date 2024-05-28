@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [ 
+    # Java
     openjdk21
     bluej 
 
