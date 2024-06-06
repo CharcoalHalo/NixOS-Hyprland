@@ -2,14 +2,17 @@
 {
   imports = [
     ./hardware-configuration.nix
-    #apps
+    # Desktop Environment
+    ../../modules/nixos/system/hyprland/hyprland.nix
+    ../../modules/nixos/system/kde.nix
+
+    # Apps
     ../../modules/nixos/system/apps/systemPackages.nix
     ../../modules/nixos/system/apps/openrazer.nix
     ../../modules/nixos/system/apps/thunar.nix
     ../../modules/nixos/system/apps/virt-manager.nix
-    #hyprland
-    ../../modules/nixos/system/hyprland/hyprland.nix
-    #general
+    
+    # General
     ../../modules/nixos/system/networking.nix
     ../../modules/nixos/system/pipewire.nix
     ../../modules/nixos/system/apps/nh.nix

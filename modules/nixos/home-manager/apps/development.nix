@@ -2,8 +2,8 @@
 {
   home.packages = with pkgs; [ 
     # Java
-    openjdk21
-    bluej 
+    openjdk22
+    # bluej no wayland support
 
     # C tools 
     cppcheck 
