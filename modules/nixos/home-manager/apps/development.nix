@@ -26,7 +26,7 @@
       "git.confirmSync" = false;
       "redhat.telemetry.enabled" = false;
       "editor.indentSize" = "tabSize";
-      "telemetry.enableTelemetry" = false;
+      "telemetry.telemetryLevel" = "off";
     };
   };
   
