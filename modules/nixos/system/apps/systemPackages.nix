@@ -20,6 +20,8 @@
     unzip
     rar
     unrar
+
+    libsForQt5.kservice
   ];
 
   system.stateVersion = "23.11";
