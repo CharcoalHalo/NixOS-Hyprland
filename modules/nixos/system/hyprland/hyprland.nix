@@ -42,40 +42,10 @@
   
   xdg.portal = {
     enable = true;
-    xdgOpenUsePortal = false;
+    xdgOpenUsePortal = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   # So hyprlock works
   security.pam.services.hyprlock = {};
-
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1"; # set wayland flags for electron apps
-    NIXOS_XDG_OPEN_USE_PORTAL = "1";
-
-   
-    EDITOR = "nano";
-    BROWSER = "librewolf";
-    TERMINAL = "kitty";
-
-    # Toolkit
-    GDK_BACKEND = "wayland,x11";
-    #SDL_VIDEODRIVER = "wayland,x11"; # can cause issues in games
-    CLUTTER_BACKEND = "wayland";
-
-    # XDG
-    XDG_CURRENT_DESKTOP = "Hyprland";
-    XDG_SESSION_TYPE = "wayland";
-    XDG_SESSION_DESKTOP = "Hyprland";
-
-    # GTK
-    GTK_USE_PORTAL = "1";
-
-    # QT
-    QT_AUTO_SCREEN_SCALE_FACTOR="1";
-    QT_QPA_PLATFORM = "wayland;xcb";
-    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    QT_QPA_PLATFORMTHEME="qt5ct";
-    # QT_STYLE_OVERRIDE = "kvantum"; # if using kvantum over qt5ct
-  };
 }
