@@ -35,6 +35,12 @@
     useOSProber = true;
     efiSupport = true;
     configurationLimit = 50;
+
+    minegrub-theme = {
+      enable = false;
+      splash = "100% Flakes!";
+      boot-options-count = 4;
+    };
   };
 
   # creates hard links of duplicate files in the nix store

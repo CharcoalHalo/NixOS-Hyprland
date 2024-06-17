@@ -24,7 +24,10 @@
     nixosConfigurations = {
       virtues = lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [ ./hosts/virtues/configuration.nix ];
+        modules = [ 
+          ./hosts/virtues/configuration.nix 
+          inputs.minegrub-theme.nixosModules.default
+        ];
         specialArgs = {
           inherit inputs;
           inherit userSettings;
@@ -60,5 +63,8 @@
       hyprsplit.inputs.hyprland.follows = "hyprland";
 
       spicetify-nix.url = "github:the-argus/spicetify-nix";
+
+      # Grub theme
+      minegrub-theme.url = "github:Lxtharia/minegrub-theme";
   };
 }
