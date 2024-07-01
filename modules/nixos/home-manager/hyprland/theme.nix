@@ -1,13 +1,13 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    libsForQt5.qt5ct
-    libsForQt5.qtstyleplugin-kvantum
+    #libsForQt5.qt5ct
+    #libsForQt5.qtstyleplugin-kvantum
     nwg-look
 
-    adw-gtk3
-    whitesur-icon-theme
-    whitesur-kde
+    #adw-gtk3
+    #whitesur-icon-theme
+    #whitesur-kde
   ];
   
   # cursor only applies to some apps without this

@@ -25,7 +25,7 @@
     #extraPackages = pkgs.lib.mkForce [ pkgs.libsForQt5.qt5.qtgraphicaleffects ];
     extraPackages = with pkgs; [     
       kdePackages.qt6ct
-      kdePackages.qt5compat
+      #kdePackages.qt5compat
       kdePackages.qtdeclarative
       kdePackages.qtsvg
     ];
