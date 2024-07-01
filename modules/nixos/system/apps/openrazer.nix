@@ -25,21 +25,16 @@
     gamescopeSession.enable = true;
     #gamescopeSession.env = ;
     gamescopeSession.args = [
-      "-W 3840"
-      "-H 2160"
-      "-O HDMI-A-1"
-      "--hdr-enabled"
-      "--hdr-itm-enable"
     ];
   };
   
   programs.gamescope = {
     enable = true;
-    capSysNice = true;
+    capSysNice = false;
   };
 
   programs.gamemode = {
     enable = true;
-    enableRenice = true;
+    enableRenice = false;
   };
 }
