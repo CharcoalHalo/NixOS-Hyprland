@@ -64,10 +64,9 @@
   boot.initrd.kernelModules = [ "amdgpu" ];
 
   # vulkan
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 
   # offical amd drivers
