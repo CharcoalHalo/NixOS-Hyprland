@@ -19,7 +19,7 @@
     libnotify
 
     swww
-    dunst
+    #dunst
     waybar
     xdg-utils
 
