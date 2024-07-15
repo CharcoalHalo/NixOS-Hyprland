@@ -13,7 +13,7 @@
     heroic
     r2modman
     # osu-lazer # bin won't launch
-    # osu-lazer-bin
+    osu-lazer-bin
     shattered-pixel-dungeon
 
     # Tools 
@@ -22,5 +22,6 @@
     mangohud
     goverlay
     protonup-qt
+    steamtinkerlaunch
   ];
 }
