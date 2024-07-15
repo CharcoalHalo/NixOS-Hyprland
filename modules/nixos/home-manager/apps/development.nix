@@ -8,7 +8,11 @@
     # C tools 
     cppcheck 
     valgrind
-    ];
+
+
+    # Game Dev
+    godot_4
+  ];
 
   programs.vscode = {
     enable = true;
@@ -27,6 +31,7 @@
       "redhat.telemetry.enabled" = false;
       "editor.indentSize" = "tabSize";
       "telemetry.telemetryLevel" = "off";
+      "godotTools.editorPath.godot4" = "/home/fbright/.nix-profile/bin/godot4";
     };
   };
   
