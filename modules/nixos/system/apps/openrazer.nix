@@ -6,7 +6,7 @@
     enable = true;
     users = [ userSettings.username ];
     batteryNotifier = {
-      enable = true;
+      enable = false;
       percentage = 25;
       frequency = 300; # 5min
     };
