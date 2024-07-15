@@ -9,20 +9,12 @@
   environment.systemPackages = with pkgs; [
     hyprland-protocols
     hyprpicker
-
     grimblast
     nwg-displays
     wl-clipboard
-    cliphist
-
-    wlogout
     libnotify
-
     swww
-    #dunst
-    waybar
     xdg-utils
-
   ];
 
   # so you don't have to compile it
