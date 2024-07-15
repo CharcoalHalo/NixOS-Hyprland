@@ -17,7 +17,7 @@
   environment.systemPackages = with pkgs; [
     ffmpegthumbnailer # video thumbnails
     evince # pdf viewer
-    gnome.file-roller # archives
+    file-roller # archives
   ];
 
 }
