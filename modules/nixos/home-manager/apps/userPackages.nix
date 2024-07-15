@@ -4,8 +4,8 @@
     # system stuff
     pamixer
     playerctl
-    gnome.eog
-    gnome.gnome-calculator
+    eog
+    gnome-calculator
     gnome-text-editor
     vlc
     pavucontrol
