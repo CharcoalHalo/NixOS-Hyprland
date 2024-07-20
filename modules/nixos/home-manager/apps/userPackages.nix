@@ -31,9 +31,9 @@
     strawberry
     zoom-us
     vesktop
-    (pkgs.discord.override {
-      withVencord = true;
-    })
+    # (pkgs.discord.override {
+    #   withVencord = true;
+    # })
     motrix
     keepassxc
     thunderbird
