@@ -1,3 +1,4 @@
+# No longer used
 { config, pkgs, ... }:
 {
   programs.nh = {

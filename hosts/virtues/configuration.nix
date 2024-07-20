@@ -15,7 +15,7 @@
     # General
     ../../modules/nixos/system/networking.nix
     ../../modules/nixos/system/pipewire.nix
-    ../../modules/nixos/system/apps/nh.nix
+    #../../modules/nixos/system/apps/nh.nix
   ];
   
   nixpkgs.config.allowUnfree = true;
@@ -46,6 +46,13 @@
   # creates hard links of duplicate files in the nix store
   nix.optimise.automatic = true;
 
+  # Automatic Garbage Collection
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
+  
   # NTFS support
   boot.supportedFilesystems = [ "ntfs" ];
 
