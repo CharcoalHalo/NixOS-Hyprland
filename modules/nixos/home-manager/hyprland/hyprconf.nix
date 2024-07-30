@@ -4,8 +4,7 @@
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     plugins = [
-      #split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
-      #inputs.hyprsplit.packages.${pkgs.system}.hyprsplit
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.csgo-vulkan-fix
     ];
     
 
