@@ -22,6 +22,7 @@
     shotcut
     audacity
     reaper
+    libresprite
 
     ungoogled-chromium
     libreoffice
@@ -31,6 +32,7 @@
     strawberry
     zoom-us
     vesktop
+    spotifywm
     # (pkgs.discord.override {
     #   withVencord = true;
     # })
