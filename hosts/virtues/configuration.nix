@@ -37,8 +37,9 @@
     configurationLimit = 50;
 
     minegrub-theme = {
-      enable = false;
+      enable = true;
       splash = "100% Flakes!";
+      background = "background_options/Alpha.png";
       boot-options-count = 4;
     };
   };
