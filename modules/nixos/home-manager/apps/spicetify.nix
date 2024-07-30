@@ -1,20 +1,17 @@
-{ inputs, pkgs, lib, ...}:
-# https://github.com/the-argus/spicetify-nix
-let
-  spicePkgs = inputs.spicetify-nix.packages.${pkgs.system}.default;
-in
+{ pkgs, inputs, ... }:
 {
-  imports = [ inputs.spicetify-nix.homeManagerModule ];
-
-  programs.spicetify = {
-    enable = true;
-    theme = spicePkgs.themes.Sleek;
-    colorScheme = "UltraBlack";
-
-    enabledExtensions = with spicePkgs.extensions; [
-      shuffle # shuffle+ (special characters are sanitized out of ext names)
-      hidePodcasts
-      fullAlbumDate
-    ];
-  };
+programs.spicetify =
+   let
+     spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+   in
+   {
+     enable = false;
+     enabledExtensions = with spicePkgs.extensions; [
+       adblock
+       hidePodcasts
+       shuffle # shuffle+ (special characters are sanitized out of extension names)
+     ];
+     theme = spicePkgs.themes.catppuccin;
+     colorScheme = "mocha";
+   };
 }
