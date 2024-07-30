@@ -38,7 +38,10 @@
     homeConfigurations = {
       virtues = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./hosts/virtues/home-manager.nix ];
+        modules = [ 
+          ./hosts/virtues/home-manager.nix 
+          inputs.spicetify-nix.homeManagerModules.default
+        ];
         extraSpecialArgs = {
           inherit userSettings;
           inherit inputs;
@@ -55,14 +58,16 @@
 
       # NixOS
       hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-      split-monitor-workspaces = {
-        url = "github:Duckonaut/split-monitor-workspaces";
+
+      hyprland-plugins = {
+        url = "github:hyprwm/hyprland-plugins";
         inputs.hyprland.follows = "hyprland";
       };
-      hyprsplit.url = "github:shezdy/hyprsplit";
-      hyprsplit.inputs.hyprland.follows = "hyprland";
-
-      spicetify-nix.url = "github:the-argus/spicetify-nix";
+      
+      spicetify-nix = {
+        url = "github:Gerg-L/spicetify-nix";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
 
       # Grub theme
       minegrub-theme.url = "github:Lxtharia/minegrub-theme";
