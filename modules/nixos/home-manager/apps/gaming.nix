@@ -4,15 +4,15 @@
     # Emulators
     pcsx2
     rpcs3
-    # yuzu # rip
     ryujinx
+    # yuzu # rip
     # citra # rip
     
     prismlauncher
     lutris
     heroic
     r2modman
-    # osu-lazer # bin won't launch
+    # osu-lazer
     osu-lazer-bin
     shattered-pixel-dungeon
 
